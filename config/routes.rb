@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :clothings
-      resources :outfit
-      resources :user, only: [:show]
+      resources :outfits
+      resources :users, only: [:index, :create, :show]
     end
   end
 end

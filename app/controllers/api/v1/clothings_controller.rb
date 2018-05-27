@@ -1,4 +1,4 @@
-class Api::V1:ClothingsController < ApplicationController
+class Api::V1::ClothingsController < ApplicationController
   before_action :set_clothing, only: [:show, :update, :destroy]
 
   def index

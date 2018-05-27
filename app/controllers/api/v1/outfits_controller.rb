@@ -1,4 +1,4 @@
-class Api::V1:OutfitsController < ApplicationController
+class Api::V1::OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :update, :destroy]
 
   def index
