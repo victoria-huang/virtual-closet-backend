@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :clothings
       resources :outfits
+      resources :clothing_outfits
       resources :users, only: [:index, :create, :show]
     end
   end
