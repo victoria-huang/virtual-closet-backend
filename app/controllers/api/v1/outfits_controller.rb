@@ -1,5 +1,5 @@
 class Api::V1::OutfitsController < ApplicationController
-  before_action :set_outfit, only: [:show, :update, :destroy]
+  before_action :set_outfit, only: [:show, :update, :destroy, :clothes]
 
   def index
     outfits = Outfit.all
@@ -24,6 +24,11 @@ class Api::V1::OutfitsController < ApplicationController
 
   def show
     render json: @outfit, status: 200
+  end
+
+  def clothes
+    outfitClothes = @outfit.clothings
+    render json: outfitClothes, status: 200
   end
 
   private
